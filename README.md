@@ -1,3 +1,21 @@
+```
+julia>
+         111111111222222
+123456789012345679012345
+*
+*
+
+rust>
+         111111111222222
+123456789012345679012345
+*
+*
+```
+
+```shell
+cargo run --bin d1p1
+```
+
 | Day  | Part 1 | Part 2 |
 | ------------- | ------------- | ------------- |
-| 1  | [Complete](https://github.com/ianwineman/aoc-2024/blob/main/d1p1.jl) | [Complete](https://github.com/ianwineman/aoc-2024/blob/main/d1p2.jl)  |
+| 1  | [Julia](); [Rust]() | [Julia](); [Rust]()  |
