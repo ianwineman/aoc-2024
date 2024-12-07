@@ -13,13 +13,7 @@ function operator_test(equation::Tuple{Int64, Vector{Int64}})::Bool
     for m=masks
         acum = equation[2][1]
         for i=1:length(m)
-            if m[i] == 0
-                acum *= equation[2][i+1]
-            elseif m[i] == 1
-                acum += equation[2][i+1]
-            elseif m[i] == 2
-                acum = parse(Int64,join([string(acum),string(equation[2][i+1])],""))
-            end
+            (m[i] == 0) ? acum*=equation[2][i+1] : (m[i] == 1) ? acum+=equation[2][i+1] : acum = parse(Int64,join([string(acum),string(equation[2][i+1])],""))
         end
         if acum == equation[1] return true end
     end
