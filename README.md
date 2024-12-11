@@ -27,3 +27,4 @@ cargo run --bin d1p1
 | 7  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d7p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d7p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d7.md) |
 | 8  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d8p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d8p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d8.md) |
 | 9  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d9p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d9p2.jl) |  |
+| 10  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d10p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d10p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d10.md) |
