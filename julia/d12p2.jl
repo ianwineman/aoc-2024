@@ -50,6 +50,70 @@ function perimeter(region::Vector{Tuple{Int64,Int64}})::Int64
     return total
 end
 
+function corners(region::Vector{Tuple{Int64,Int64}},map::Matrix{String})::Int64
+    total = 0
+    for plant in region
+        grid = fill("",(3,3))
+        grid[2,2] = map[plant...]
+
+        for i in [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
+            try
+                if map[(plant.+i)...] != grid[2,2]
+                    grid[((2,2).+i)...] = map[(plant.+i)...]
+                else 
+                    if (plant.+i) in region 
+                        grid[((2,2).+i)...] = map[(plant.+i)...]
+                    else
+                        grid[((2,2).+i)...] = "0"
+                    end
+                end
+            catch e
+                grid[((2,2).+i)...] = "0" # "0" denotes off map location
+            end
+        end
+
+        contribution = 0
+
+        d1 = [(1,2),(2,3)]
+        d2 = [(2,3),(3,2)]
+        d3 = [(3,2),(2,1)]
+        d4 = [(2,1),(1,2)]
+
+        if (grid[d1[1]...] != grid[2,2]) && (grid[d1[2]...] != grid[2,2])
+            contribution += 1
+        end
+        if (grid[d2[1]...] != grid[2,2]) && (grid[d2[2]...] != grid[2,2])
+            contribution += 1
+        end
+        if (grid[d3[1]...] != grid[2,2]) && (grid[d3[2]...] != grid[2,2])
+            contribution += 1
+        end
+        if (grid[d4[1]...] != grid[2,2]) && (grid[d4[2]...] != grid[2,2])
+            contribution += 1
+        end
+
+        if (grid[d1[1]...] == grid[2,2]) && (grid[d1[2]...] == grid[2,2]) && (grid[1,3] != grid[2,2])
+            contribution += 1
+        end
+        if (grid[d2[1]...] == grid[2,2]) && (grid[d2[2]...] == grid[2,2]) && (grid[3,3] != grid[2,2])
+            contribution += 1
+        end
+        if (grid[d3[1]...] == grid[2,2]) && (grid[d3[2]...] == grid[2,2]) && (grid[3,1] != grid[2,2])
+            contribution += 1
+        end
+        if (grid[d4[1]...] == grid[2,2]) && (grid[d4[2]...] == grid[2,2]) && (grid[1,1] != grid[2,2])
+            contribution += 1
+        end
+        
+        total += contribution
+    end
+    return total
+end
+
+function sides(region::Vector{Tuple{Int64,Int64}},map::Matrix{String})::Int64
+    return corners(region,map) 
+end
+
 # Parse input into Matrix{String}
 lines = split(input, "\n")
 input_dims = (length(lines), length(lines[1]))
@@ -91,4 +155,4 @@ end
 combine!(region_dict)
 
 # Calculate total price
-reduce(+,[area(r) * perimeter(r) for r in values(region_dict)])
+reduce(+,[area(r) * sides(r,input_matrix) for r in values(region_dict)])
