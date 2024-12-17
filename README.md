@@ -2,7 +2,7 @@
 julia>
          111111111222222
 123456789012345679012345
-**************
+***************
 ************ *
 
 rust>
@@ -32,3 +32,4 @@ cargo run --bin d1p1
 | 12  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d12p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d12p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d12.md) |
 | 13  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d13p1.jl) |  |  |
 | 14  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d14p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d14p2.jl) |  |
+| 15  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d15p1.jl) |  |  |
