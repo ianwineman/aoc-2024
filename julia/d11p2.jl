@@ -21,7 +21,7 @@ for blink=1:75
     for k=keys(arrangement)
         count, stone = arrangement[k]
         t = transform(stone)
-        (length(t) == 1) ?  (arrangement[k] = (count,t)) : (arrangement[k] = (count,t[1]); push!(arrangement,(count,t[2])))
+        (length(t) == 1) ? (arrangement[k] = (count,t)) : (arrangement[k] = (count,t[1]); push!(arrangement,(count,t[2])))
     end
     global arrangement = consolidated(arrangement)
 end
