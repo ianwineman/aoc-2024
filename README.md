@@ -3,7 +3,7 @@ julia>
          111111111222222
 123456789012345679012345
 ***************
-************ *
+**************
 
 rust>
          111111111222222
@@ -30,6 +30,6 @@ cargo run --bin d1p1
 | 10  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d10p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d10p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d10.md) |
 | 11  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d11p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d11p2.jl) |  |
 | 12  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d12p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d12p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d12.md) |
-| 13  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d13p1.jl) |  |  |
+| 13  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d13p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d13p2.jl) | [Notes](https://github.com/ianwineman/aoc-2024/blob/main/notes/d13.md) |
 | 14  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d14p1.jl) | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d14p2.jl) |  |
 | 15  | [Julia](https://github.com/ianwineman/aoc-2024/blob/main/julia/d15p1.jl) |  |  |
